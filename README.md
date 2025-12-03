@@ -53,8 +53,8 @@ github.com/golang/glog,https://github.com/golang/glog/blob/23def4e6c14b/LICENSE,
 github.com/golang/groupcache/lru,https://github.com/golang/groupcache/blob/41bb18bfe9da/LICENSE,Apache-2.0
 github.com/google/go-licenses,https://github.com/google/go-licenses/blob/HEAD/LICENSE,Apache-2.0
 github.com/google/go-licenses/internal/third_party/pkgsite,https://github.com/google/go-licenses/blob/HEAD/internal/third_party/pkgsite/LICENSE,BSD-3-Clause
-github.com/google/licenseclassifier,https://github.com/google/licenseclassifier/blob/3043a050f148/LICENSE,Apache-2.0
-github.com/google/licenseclassifier/stringclassifier,https://github.com/google/licenseclassifier/blob/3043a050f148/stringclassifier/LICENSE,Apache-2.0
+github.com/antst/licenseclassifier,https://github.com/antst/licenseclassifier/blob/3043a050f148/LICENSE,Apache-2.0
+github.com/antst/licenseclassifier/stringclassifier,https://github.com/antst/licenseclassifier/blob/3043a050f148/stringclassifier/LICENSE,Apache-2.0
 github.com/jbenet/go-context/io,https://github.com/jbenet/go-context/blob/d14ea06fba99/LICENSE,MIT
 github.com/kevinburke/ssh_config,https://github.com/kevinburke/ssh_config/blob/01f96b0aa0cd/LICENSE,MIT
 github.com/mitchellh/go-homedir,https://github.com/mitchellh/go-homedir/blob/v1.1.0/LICENSE,MIT
@@ -118,9 +118,9 @@ W0822 16:56:51.605074   10200 library.go:269] module github.com/google/go-licens
  - github.com/golang/groupcache/lru ([Apache-2.0](https://github.com/golang/groupcache/blob/41bb18bfe9da/LICENSE))
  - github.com/google/go-licenses ([Apache-2.0](https://github.com/google/go-licenses/blob/HEAD/LICENSE))
  - github.com/google/go-licenses/internal/third_party/pkgsite ([BSD-3-Clause](https://github.com/google/go-licenses/blob/HEAD/internal/third_party/pkgsite/LICENSE))
- - github.com/google/licenseclassifier ([Apache-2.0](https://github.com/google/licenseclassifier/blob/3043a050f148/LICENSE))
- - github.com/google/licenseclassifier/licenses ([Unlicense](https://github.com/google/licenseclassifier/blob/3043a050f148/licenses/Unlicense.txt))
- - github.com/google/licenseclassifier/stringclassifier ([Apache-2.0](https://github.com/google/licenseclassifier/blob/3043a050f148/stringclassifier/LICENSE))
+ - github.com/antst/licenseclassifier ([Apache-2.0](https://github.com/antst/licenseclassifier/blob/3043a050f148/LICENSE))
+ - github.com/antst/licenseclassifier/licenses ([Unlicense](https://github.com/antst/licenseclassifier/blob/3043a050f148/licenses/Unlicense.txt))
+ - github.com/antst/licenseclassifier/stringclassifier ([Apache-2.0](https://github.com/antst/licenseclassifier/blob/3043a050f148/stringclassifier/LICENSE))
  - github.com/jbenet/go-context/io ([MIT](https://github.com/jbenet/go-context/blob/d14ea06fba99/LICENSE))
  - github.com/kevinburke/ssh_config ([MIT](https://github.com/kevinburke/ssh_config/blob/01f96b0aa0cd/LICENSE))
  - github.com/mitchellh/go-homedir ([MIT](https://github.com/mitchellh/go-homedir/blob/v1.1.0/LICENSE))
@@ -195,7 +195,7 @@ Forbidden license type WTFPL for library github.com/logrusorgru/auroraexit statu
 
 This command analyzes a package's dependencies and determines if any are
 considered forbidden by the license classifer. See
-[github.com/google/licenseclassifier](https://github.com/google/licenseclassifier/blob/842c0d70d7027215932deb13801890992c9ba364/license_type.go#L323)
+[github.com/antst/licenseclassifier](https://github.com/antst/licenseclassifier/blob/842c0d70d7027215932deb13801890992c9ba364/license_type.go#L323)
 for licenses considered forbidden.
 
 ## Usages
@@ -258,12 +258,12 @@ go-licenses check <package> [package...] --disallowed_types=<comma separated lic
 
 Supported license types:
 
-* See `forbidden` list: [github.com/google/licenseclassifier](https://github.com/google/licenseclassifier/blob/e6a9bb99b5a6f71d5a34336b8245e305f5430f99/license_type.go#L341)
-* See `notice` list:  [github.com/google/licenseclassifier](https://github.com/google/licenseclassifier/blob/e6a9bb99b5a6f71d5a34336b8245e305f5430f99/license_type.go#L249)
-* See `permissive` list:  [github.com/google/licenseclassifier](https://github.com/google/licenseclassifier/blob/e6a9bb99b5a6f71d5a34336b8245e305f5430f99/license_type.go#L321)
-* See `reciprocal` list:  [github.com/google/licenseclassifier](https://github.com/google/licenseclassifier/blob/e6a9bb99b5a6f71d5a34336b8245e305f5430f99/license_type.go#L225)
-* See `restricted` list:  [github.com/google/licenseclassifier](https://github.com/google/licenseclassifier/blob/e6a9bb99b5a6f71d5a34336b8245e305f5430f99/license_type.go#L185)
-* See `unencumbered` list:  [github.com/google/licenseclassifier](https://github.com/google/licenseclassifier/blob/e6a9bb99b5a6f71d5a34336b8245e305f5430f99/license_type.go#L324)
+* See `forbidden` list: [github.com/antst/licenseclassifier](https://github.com/antst/licenseclassifier/blob/e6a9bb99b5a6f71d5a34336b8245e305f5430f99/license_type.go#L341)
+* See `notice` list:  [github.com/antst/licenseclassifier](https://github.com/antst/licenseclassifier/blob/e6a9bb99b5a6f71d5a34336b8245e305f5430f99/license_type.go#L249)
+* See `permissive` list:  [github.com/antst/licenseclassifier](https://github.com/antst/licenseclassifier/blob/e6a9bb99b5a6f71d5a34336b8245e305f5430f99/license_type.go#L321)
+* See `reciprocal` list:  [github.com/antst/licenseclassifier](https://github.com/antst/licenseclassifier/blob/e6a9bb99b5a6f71d5a34336b8245e305f5430f99/license_type.go#L225)
+* See `restricted` list:  [github.com/antst/licenseclassifier](https://github.com/antst/licenseclassifier/blob/e6a9bb99b5a6f71d5a34336b8245e305f5430f99/license_type.go#L185)
+* See `unencumbered` list:  [github.com/antst/licenseclassifier](https://github.com/antst/licenseclassifier/blob/e6a9bb99b5a6f71d5a34336b8245e305f5430f99/license_type.go#L324)
 * `unknown`
 
 Allow only specific license names:
@@ -272,7 +272,7 @@ Allow only specific license names:
 go-licenses check <package> [package...] --allowed_licenses=<comma separated license names> 
 ```
 
-* See supported license names: [github.com/google/licenseclassifier](https://github.com/google/licenseclassifier/blob/e6a9bb99b5a6f71d5a34336b8245e305f5430f99/license_type.go#L28)
+* See supported license names: [github.com/antst/licenseclassifier](https://github.com/antst/licenseclassifier/blob/e6a9bb99b5a6f71d5a34336b8245e305f5430f99/license_type.go#L28)
 
 ### Build tags
 

@@ -5,7 +5,6 @@ go 1.23.0
 require (
 	github.com/google/go-cmp v0.6.0
 	github.com/google/go-replayers/httpreplay v1.2.0
-	github.com/google/licenseclassifier/v2 v2.0.0
 	github.com/otiai10/copy v1.10.0
 	github.com/spf13/cobra v1.7.0
 	go.opencensus.io v0.24.0
@@ -18,12 +17,14 @@ require (
 )
 
 require (
+	github.com/antst/licenseclassifier v0.0.0-20251203112623-0c22db183e4e // indirect
+	github.com/antst/licenseclassifier/v2 v2.0.1 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/go-logr/logr v1.2.0 // indirect
 	github.com/golang/groupcache v0.0.0-20210331224755-41bb18bfe9da // indirect
 	github.com/google/martian/v3 v3.3.2 // indirect
 	github.com/inconshreveable/mousetrap v1.1.0 // indirect
-	github.com/sergi/go-diff v1.2.0 // indirect
+	github.com/sergi/go-diff v1.4.0 // indirect
 	github.com/spf13/pflag v1.0.5 // indirect
 	golang.org/x/sys v0.35.0 // indirect
 )

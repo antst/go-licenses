@@ -17,8 +17,8 @@ package licenses
 import (
 	"os"
 
-	licenseclassifier "github.com/google/licenseclassifier/v2"
-	"github.com/google/licenseclassifier/v2/assets"
+	licenseclassifier "github.com/antst/licenseclassifier/v2"
+	"github.com/antst/licenseclassifier/v2/assets"
 )
 
 // Classifier can detect the type of a software license.
@@ -76,10 +76,12 @@ func (c *googleClassifier) Identify(licensePath string) ([]License, error) {
 		}
 		foundLicenseNames[match.Name] = struct{}{}
 
-		licenses = append(licenses, License{
-			Name: match.Name,
-			Type: LicenseType(match.Name),
-		})
+		licenses = append(
+			licenses, License{
+				Name: match.Name,
+				Type: LicenseType(match.Name),
+			},
+		)
 	}
 
 	return licenses, nil
